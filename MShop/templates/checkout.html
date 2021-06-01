@@ -1,0 +1,71 @@
+{% extends 'mainpage.html' %}
+{% load static %}
+{% block content %}
+<div class="box">
+	<div class="col-lg-6">
+		<div class="box-element" id="form-wrap">
+			<form id="form">
+				<div id="userInfo">
+					<div class="formField">
+						<input required class="formControl" type="text" name="name" placeholder="Name">
+					</div>
+
+					<div class="formField">
+						<input required class="formControl" type="email" name="email" placeholder="Email">
+					</div>
+				</div>
+
+				<div id="shipDetails">
+					<hr>
+					<p>Shipping Details:</p>
+					<hr>
+					<div class="formField">
+						<input required class="formControl" type="text" name="address" placeholder="Address">
+					</div>
+
+					<div class="formField">
+						<input required class="formControl" type="text" name="city" placeholder="City">
+					</div>
+
+					<div class="formField">
+						<input required class="formControl" type="text" name="zipcode" placeholder="Zip code">
+					</div>
+
+					<div class="formField">
+						<input required class="formControl" type="text" name="country" value="Philippines">
+					</div>					
+				</div>
+				
+				<hr>
+				<input type="submit" name="submit" value="Continue" id="formButton" class="btn">
+			</form>
+		</div>
+		
+		<br>
+		<div class="box-element">
+			<small>payment option</small>
+			
+		</div>
+	</div>
+	
+	<div class="col">
+		<div class="box-element" id="paymentInfo">
+			<a class="btn" href="{% url 'cart' %}">&#x2190; Back to Cart</a>
+			<hr>
+			<h3>Order Summary</h3>
+			<hr>
+
+			<div class="box">
+				<div style="flex: 2"><img class="row-image" src="{% static 'images/panda.jpg' %}"></div>
+				<div style="flex: 2"><img class="row-image" src="{% static 'images/sampledesign.jpg' %}"></div>
+				<div style="flex: 2"><p>product 1</p></div>
+				<div style="flex: 1"><p>Php 200.00</p></div>
+				<div style="flex: 1"><p>x 2</p></div>
+			</div>
+
+			<h5>Items: 2</h5>
+			<h5>Total: Php 400.00</h5>
+		</div>
+	</div>
+</div>
+{% endblock %}

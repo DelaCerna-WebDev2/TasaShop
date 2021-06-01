@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title> MUGSHOP </title>
+	<!-- bootstrap here, if meron -->
+	<link rel="stylesheet" type="text/css" href="{% static 'CSS/style.css' %}">
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+</head>
+<body>
+	<div class="container">
+  <div class="navbar">
+    <div class="logo">
+      <a href="{% url 'shop' %}">
+        <img src="{% static 'images/logo.png' %}">
+      </a>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="{% url 'shop' %}">Shop</a></li>
+        <li><a href="">Login</a></li>
+      </ul>
+    </nav>
+    <div class="cartbox">          
+      <a href="{% url 'cart' %}">
+        <p id="cart-total">0</p>   
+        <img id="cart-icon" src="{% static 'images/cart-icon.png' %}">             
+      </a>
+    </div>                          
+  </div>
+</div>
+	<div>
+		{% block content %}
+		{% endblock content %}
+	</div>
+<!-- JS here, if meron -->
+	<hr style="color: red">
+	<h1>footer here</h1>
+</body>
+</html>
+
+
+

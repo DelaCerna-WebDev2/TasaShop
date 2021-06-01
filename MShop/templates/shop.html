@@ -1,0 +1,153 @@
+{% extends 'mainpage.html' %}
+{% load static %}
+
+{% block content %}
+<div class="box">
+	<!-- register or login here -->
+	<div class="box-element product">
+		<h2><strong>LOGIN</strong></h2>
+		<input placeholder="User Name" type="text" name="entryname" id="entryname" class="btn"/>
+		<br>
+		<input placeholder="Enter Password" type="text" name="entryname" id="entryname" class="btn"/>
+		<br>		
+		<hr>
+		<button>Continue</button>
+	</div>
+
+	<hr>
+
+	<!-- User's Entries -->
+	<div class="box-element product">
+		<h2><strong>Entry</strong></h2><br>
+		<input type="file" id="entry" name="entry" accept="image/*"/>
+		<br>
+		<input placeholder="Entry Name" type="text" name="entryname" id="entryname" class="btn"/>
+		<br>
+		<input placeholder="Entry Price" type="number" name="entryname" id="entryname" class="btn">
+		<hr>
+		<button class="btn">SUBMIT</button>
+	</div>
+
+	<br>
+	<br>
+	<br>
+	<hr>
+
+
+	<!-- for p in products -->
+	<!-- <div class="col">
+		<img class="productPic" src="{{p.imgURL}}">
+		<div class="box-element product">
+			<h6><strong>{{p.name}}</strong></h6>
+			<hr>
+
+			<button class="btn">Add to Cart</button>
+			<a class="btn" href="#">View</a>
+			<h4 style="display: inline-block;">Php {{p.price}}</h4>
+		</div>
+	</div> -->
+
+	
+
+	<!-- PRODUCTS -->
+	<div class="col">
+		<img class="productPic" src="{% static 'images/panda.jpg' %}">
+		<div class="box-element product">
+			<h6><strong>DUMMY PRODUCT</strong></h6>
+			<hr>
+
+			<button class="btn">Add to Cart</button>
+			<a class="btn" href="#">View</a>
+			<h4 style="display: inline-block;">Php 200 </h4>
+		</div>
+	</div>
+	
+	<div class="col">
+		<img class="productPic" src="{% static 'images/panda.jpg' %}">
+		<div class="box-element product">
+			<h6><strong>DUMMY PRODUCT</strong></h6>
+			<hr>
+
+			<button class="btn">Add to Cart</button>
+			<a class="btn" href="#">View</a>
+			<h4 style="display: inline-block;">Php 200 </h4>
+		</div>
+	</div>
+
+	<div class="col">
+		<img class="productPic" src="{% static 'images/panda.jpg' %}">
+		<div class="box-element product">
+			<h6><strong>DUMMY PRODUCT</strong></h6>
+			<hr>
+
+			<button class="btn">Add to Cart</button>
+			<a class="btn" href="#">View</a>
+			<h4 style="display: inline-block;">Php 200 </h4>
+		</div>
+	</div>
+
+	<div class="col">
+		<img class="productPic" src="{% static 'images/panda.jpg' %}">
+		<div class="box-element product">
+			<h6><strong>DUMMY PRODUCT</strong></h6>
+			<hr>
+
+			<button class="btn">Add to Cart</button>
+			<a class="btn" href="#">View</a>
+			<h4 style="display: inline-block;">Php 200 </h4>
+		</div>
+	</div>
+
+	<div class="col">
+		<img class="productPic" src="{% static 'images/panda.jpg' %}">
+		<div class="box-element product">
+			<h6><strong>DUMMY PRODUCT</strong></h6>
+			<hr>
+
+			<button class="btn">Add to Cart</button>
+			<a class="btn" href="#">View</a>
+			<h4 style="display: inline-block;">Php 200 </h4>
+		</div>
+	</div>
+
+	<div class="col">
+		<img class="productPic" src="{% static 'images/panda.jpg' %}">
+		<div class="box-element product">
+			<h6><strong>DUMMY PRODUCT</strong></h6>
+			<hr>
+
+			<button class="btn">Add to Cart</button>
+			<a class="btn" href="#">View</a>
+			<h4 style="display: inline-block;">Php 200 </h4>
+		</div>
+	</div>
+
+	<div class="col">
+		<img class="productPic" src="{% static 'images/panda.jpg' %}">
+		<div class="box-element product">
+			<h6><strong>DUMMY PRODUCT</strong></h6>
+			<hr>
+
+			<button class="btn">Add to Cart</button>
+			<a class="btn" href="#">View</a>
+			<h4 style="display: inline-block;">Php 200 </h4>
+		</div>
+	</div>
+
+	<div class="col">
+		<img class="productPic" src="{% static 'images/panda.jpg' %}">
+		<div class="box-element product">
+			<h6><strong>DUMMY PRODUCT</strong></h6>
+			<hr>
+
+			<button class="btn">Add to Cart</button>
+			<a class="btn" href="#">View</a>
+			<h4 style="display: inline-block;">Php 200 </h4>
+		</div>
+	</div>
+
+
+	<!-- endfor  -->
+</div>
+
+{% endblock %}

@@ -1,9 +1,15 @@
 from django.test import TestCase
-from django.urls import resolve
-from MShop.views import MainPage
+from django.contrib.staticfiles import finders
+from MShop.models import Customer, Product, Order, Cart, Shipping
 
 class HomePageTest(TestCase):
+
+	def test_mainpage_return_view(self):
+		response = self.client.get('/')
+		self.assertTemplateUsed(response,'mainpage.html')
+
+class StaticFile(TestCase):
 	
-	def test_root_url_resolve(self):
-		found = resolve('/')
-		self.assertEqual(found.func, MainPage)
+	def test_static_file(self):
+		static_file = finders.find('CSS/style.css')
+		self.assertEqual(static_file, style)
